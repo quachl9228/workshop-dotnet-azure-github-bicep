@@ -47,14 +47,14 @@ jobs:
     with:
       env: dev
       artifact_name: dotnet-artifact
-      resource_group_name: rg-workshop-dnazghbicep-scottsauber-dev
-      app_service_name: app-workshop-dnazghbicep-scottsauber-dev
+      resource_group_name: rg-workshop-dnazghbicep-quachl9228-dev
+      app_service_name: app-workshop-dnazghbicep-quachl9228-dev
       app_service_slot_name: slot
     # Note: use GH Environment Secrets if using a Pro/Enterprise version of GH
     secrets:
-      azure_client_id: ${{ secrets.DEV_AZURE_CLIENT_ID }}
-      azure_subscription_id: ${{ secrets.DEV_AZURE_SUBSCRIPTION_ID }}
-      azure_tenant_id: ${{ secrets.DEV_AZURE_TENANT_ID }}
+      azure_client_id: ${{secrets.DEV_AZURE_CLIENT_ID}}
+      azure_subscription_id: ${{secrets.DEV_AZURE_SUBSCRIPTION_ID}}
+      azure_tenant_id: ${{secrets.DEV_AZURE_TENANT_ID}}
 
   prod:
     needs: dev
@@ -62,11 +62,11 @@ jobs:
     with:
       env: prod
       artifact_name: dotnet-artifact
-      resource_group_name: rg-workshop-dnazghbicep-scottsauber-prod
-      app_service_name: app-workshop-dnazghbicep-scottsauber-prod
+      resource_group_name: rg-workshop-dnazghbicep-quachl9228-prod
+      app_service_name: app-workshop-dnazghbicep-quachl9228-prod
       app_service_slot_name: slot
     # Note: use GH Environment Secrets if using a Pro/Enterprise version of GH
     secrets:
-      azure_client_id: ${{ secrets.PROD_AZURE_CLIENT_ID }}
-      azure_subscription_id: ${{ secrets.PROD_AZURE_SUBSCRIPTION_ID }}
-      azure_tenant_id: ${{ secrets.PROD_AZURE_TENANT_ID }}
+      azure_client_id: ${{secrets.PROD_AZURE_CLIENT_ID}}
+      azure_subscription_id: ${{secrets.PROD_AZURE_SUBSCRIPTION_ID}}
+      azure_tenant_id: ${{secrets.PROD_AZURE_TENANT_ID}}
